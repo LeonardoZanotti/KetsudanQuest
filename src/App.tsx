@@ -1,21 +1,25 @@
 import { useState } from "react";
-import { questions, leadershipTypes } from "./data";
+import {
+	questions,
+	leadershipTypes,
+	type LeadershipType,
+	type Question,
+	type Option,
+} from "./data";
 
 export default function App() {
-	const [step, setStep] = useState(0); // controla qual pergunta (0 = tela inicial)
-	const [answers, setAnswers] = useState([]);
+	const [step, setStep] = useState<number>(0); // controla a etapa
+	const [answers, setAnswers] = useState<string[]>([]); // armazena os tipos de liderança das respostas
 
-	// registra resposta e avança
-	function handleAnswer(type) {
+	function handleAnswer(type: string) {
 		setAnswers([...answers, type]);
 		setStep(step + 1);
 	}
 
-	// calcula resultado baseado na resposta mais frequente
-	function getResult() {
-		const count = {};
+	function getResult(): LeadershipType | undefined {
+		const count: Record<string, number> = {};
 		answers.forEach((t) => (count[t] = (count[t] || 0) + 1));
-		let maxType = null;
+		let maxType: string | null = null;
 		let maxCount = 0;
 		for (const type in count) {
 			if (count[type] > maxCount) {
@@ -23,6 +27,7 @@ export default function App() {
 				maxType = type;
 			}
 		}
+		if (!maxType) return undefined;
 		return leadershipTypes[maxType];
 	}
 
@@ -47,7 +52,7 @@ export default function App() {
 	}
 
 	if (step > 0 && step <= questions.length) {
-		const current = questions[step - 1];
+		const current: Question = questions[step - 1];
 		return (
 			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 				<div className="max-w-lg w-full">
@@ -55,7 +60,7 @@ export default function App() {
 						{current.question}
 					</h2>
 					<div className="flex flex-col gap-4">
-						{current.options.map((opt) => (
+						{current.options.map((opt: Option) => (
 							<button
 								key={opt.id}
 								onClick={() => handleAnswer(opt.type)}
@@ -73,8 +78,16 @@ export default function App() {
 		);
 	}
 
-	// Resultado final
 	const result = getResult();
+
+	if (!result) {
+		return (
+			<div>
+				Ocorreu um erro ao calcular seu resultado. Tente jogar
+				novamente.
+			</div>
+		);
+	}
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
