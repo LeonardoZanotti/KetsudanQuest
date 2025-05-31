@@ -21,41 +21,84 @@ export interface LeadershipType {
 }
 
 export const leadershipTypes: Record<string, LeadershipType> = {
-	Inspirador: {
+	Transformacional: {
 		description:
-			"Você lidera inspirando os outros com sua coragem e amizade.",
+			"Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão. Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.",
 		anime: {
-			name: "Monkey D. Luffy",
-			img: "https://upload.wikimedia.org/wikipedia/en/0/0c/Monkey_D_Luffy.png",
+			name: "Naruto Uzumaki",
+			img: "https://upload.wikimedia.org/wikipedia/en/9/94/Naruto_Uzumaki.png",
 		},
 	},
-	Estratégico: {
+	Transacional: {
 		description:
-			"Você é um líder que pensa e planeja cada passo com cuidado.",
+			"Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.",
 		anime: {
-			name: "Light Yagami",
-			img: "https://upload.wikimedia.org/wikipedia/en/4/44/Light_Yagami.png",
+			name: "Roy Mustang (Fullmetal Alchemist)",
+			img: "https://upload.wikimedia.org/wikipedia/en/4/4b/Roy_Mustang.png",
 		},
 	},
-	Disciplinador: {
-		description: "Você lidera com disciplina e pelo exemplo.",
+	Servidor: {
+		description:
+			"Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.",
 		anime: {
-			name: "Levi Ackerman",
-			img: "https://upload.wikimedia.org/wikipedia/en/9/9a/Levi_Ackerman.png",
+			name: "Tanjiro Kamado",
+			img: "https://upload.wikimedia.org/wikipedia/en/c/c6/Tanjiro_Kamado.png",
 		},
 	},
-	Corajoso: {
-		description: "Você encara desafios com bravura e força de vontade.",
+	Autocrático: {
+		description:
+			"Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.",
 		anime: {
-			name: "Goku",
-			img: "https://upload.wikimedia.org/wikipedia/en/0/01/Goku_anime.png",
+			name: "Madara Uchiha",
+			img: "https://upload.wikimedia.org/wikipedia/en/1/10/Madara_Uchiha.png",
 		},
 	},
-	Calmo: {
-		description: "Você mantém a calma e orienta os outros com sabedoria.",
+	Democrático: {
+		description:
+			"Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.",
 		anime: {
-			name: "Shikamaru Nara",
-			img: "https://upload.wikimedia.org/wikipedia/en/f/f3/Shikamaru_Nara.png",
+			name: "Edward Elric",
+			img: "https://upload.wikimedia.org/wikipedia/en/e/e6/Edward_Elric.png",
+		},
+	},
+	Liberal: {
+		description:
+			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
+		anime: {
+			name: "Shota Aizawa (Eraser Head)",
+			img: "https://upload.wikimedia.org/wikipedia/en/9/90/Shota_Aizawa.png",
+		},
+	},
+	Carismático: {
+		description:
+			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
+		anime: {
+			name: "Lelouch Lamperouge",
+			img: "https://upload.wikimedia.org/wikipedia/en/6/65/Lelouch_Lamperouge.png",
+		},
+	},
+	Visionário: {
+		description:
+			"Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.",
+		anime: {
+			name: "Erwin Smith",
+			img: "https://upload.wikimedia.org/wikipedia/en/b/b8/Erwin_Smith.png",
+		},
+	},
+	Coaching: {
+		description:
+			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
+		anime: {
+			name: "Kakashi Hatake",
+			img: "https://upload.wikimedia.org/wikipedia/en/8/88/Kakashi_Hatake.png",
+		},
+	},
+	Situacional: {
+		description:
+			"Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.",
+		anime: {
+			name: "Gon Freecss",
+			img: "https://upload.wikimedia.org/wikipedia/en/d/d0/Gon_Freecss.png",
 		},
 	},
 };
@@ -63,45 +106,216 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 export const questions: Question[] = [
 	{
 		id: 1,
-		question: "Você prefere liderar um time...?",
+		question:
+			"Você está jogando com amigos e alguém começa a bagunçar o jogo. O que você faz?",
 		options: [
 			{
 				id: "a",
-				text: "Inspirando pela amizade e coragem",
-				type: "Inspirador",
+				text: "Tenta conversar e chegar num acordo com o grupo",
+				type: "Democrático",
 			},
 			{
 				id: "b",
-				text: "Com estratégia e planejamento",
-				type: "Estratégico",
+				text: "Chama atenção e impõe regras",
+				type: "Autocrático",
 			},
 			{
 				id: "c",
-				text: "Com disciplina e exemplo",
-				type: "Disciplinador",
+				text: "Dá liberdade e vê se a coisa se resolve sozinha",
+				type: "Liberal",
 			},
 		],
 	},
 	{
 		id: 2,
-		question: "Diante de um desafio, você...?",
+		question:
+			"Você é escolhido para liderar um grupo num trabalho da faculdade. Como age?",
 		options: [
 			{
 				id: "a",
-				text: "Enfrenta de frente, mesmo com riscos",
-				type: "Corajoso",
+				text: "Cria uma visão inspiradora pro grupo seguir",
+				type: "Transformacional",
 			},
 			{
 				id: "b",
-				text: "Analisa as opções antes de agir",
-				type: "Estratégico",
+				text: "Escuta todos e define funções juntos",
+				type: "Democrático",
 			},
 			{
 				id: "c",
-				text: "Mantém a calma e orienta os outros",
-				type: "Calmo",
+				text: "Organiza tarefas com prazos e metas claras",
+				type: "Transacional",
 			},
 		],
 	},
-	// mais perguntas se quiser
+	{
+		id: 3,
+		question:
+			"Você e seus amigos estão planejando uma viagem. Qual seu papel?",
+		options: [
+			{
+				id: "a",
+				text: "Motiva a galera com ideias criativas e destinos incríveis",
+				type: "Transformacional",
+			},
+			{
+				id: "b",
+				text: "Organiza o roteiro, reserva e transporte",
+				type: "Transacional",
+			},
+			{
+				id: "c",
+				text: "Ajuda todo mundo a se entender e se sentir incluído",
+				type: "Servidor",
+			},
+		],
+	},
+	{
+		id: 4,
+		question: "Quando tem uma discussão num grupo de WhatsApp, você...",
+		options: [
+			{
+				id: "a",
+				text: "Tenta resolver com empatia e bom humor",
+				type: "Servidor",
+			},
+			{
+				id: "b",
+				text: "Assume a conversa e direciona a solução",
+				type: "Autocrático",
+			},
+			{
+				id: "c",
+				text: "Sugere uma chamada para resolverem juntos",
+				type: "Democrático",
+			},
+		],
+	},
+	{
+		id: 5,
+		question: "Alguém novo entra no seu grupo de amigos. Você...",
+		options: [
+			{
+				id: "a",
+				text: "Faz perguntas e tenta deixar a pessoa confortável",
+				type: "Coaching",
+			},
+			{
+				id: "b",
+				text: "Observa como a pessoa se adapta naturalmente",
+				type: "Liberal",
+			},
+			{
+				id: "c",
+				text: "Apresenta os amigos e ajuda na integração",
+				type: "Servidor",
+			},
+		],
+	},
+	{
+		id: 6,
+		question: "Você está em uma competição. Como motiva seu time?",
+		options: [
+			{
+				id: "a",
+				text: "Dá um discurso empolgante antes da prova",
+				type: "Carismático",
+			},
+			{
+				id: "b",
+				text: "Relembra as metas e o plano definido",
+				type: "Transacional",
+			},
+			{
+				id: "c",
+				text: "Lembra a todos do propósito e do trabalho em equipe",
+				type: "Visionário",
+			},
+		],
+	},
+	{
+		id: 7,
+		question:
+			"Você precisa organizar uma festa surpresa. O que faz primeiro?",
+		options: [
+			{
+				id: "a",
+				text: "Cria uma vibe temática e envolvente",
+				type: "Transformacional",
+			},
+			{
+				id: "b",
+				text: "Define quem faz o quê com prazos",
+				type: "Transacional",
+			},
+			{
+				id: "c",
+				text: "Conversa com o grupo pra decidir tudo junto",
+				type: "Democrático",
+			},
+		],
+	},
+	{
+		id: 8,
+		question: "Seu grupo está dividido sobre qual série assistir. Você...",
+		options: [
+			{
+				id: "a",
+				text: "Faz uma votação e segue o que a maioria decidir",
+				type: "Democrático",
+			},
+			{
+				id: "b",
+				text: "Sugere que assistam sozinhos e depois conversem",
+				type: "Liberal",
+			},
+			{
+				id: "c",
+				text: "Dá um jeito de convencer todos com carisma",
+				type: "Carismático",
+			},
+		],
+	},
+	{
+		id: 9,
+		question: "Se pudesse escolher um superpoder, qual seria?",
+		options: [
+			{
+				id: "a",
+				text: "Se dar bem com qualquer pessoa",
+				type: "Carismático",
+			},
+			{
+				id: "b",
+				text: "Ver o futuro",
+				type: "Visionário",
+			},
+			{
+				id: "c",
+				text: "Ter uma mochila com capacidade infinita",
+				type: "Situacional",
+			},
+		],
+	},
+	{
+		id: 10,
+		question: "Em um grupo novo, você costuma...",
+		options: [
+			{
+				id: "a",
+				text: "Assumir a liderança naturalmente",
+				type: "Autocrático",
+			},
+			{
+				id: "b",
+				text: "Esperar o grupo se formar e adaptar conforme precisa",
+				type: "Situacional",
+			},
+			{
+				id: "c",
+				text: "Ajudar cada pessoa a se integrar",
+				type: "Coaching",
+			},
+		],
+	},
 ];
