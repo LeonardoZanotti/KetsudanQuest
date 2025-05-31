@@ -13,6 +13,7 @@ export interface Question {
 }
 
 export interface LeadershipType {
+	type: string;
 	description: string;
 	anime: {
 		name: string;
@@ -21,7 +22,8 @@ export interface LeadershipType {
 }
 
 export const leadershipTypes: Record<string, LeadershipType> = {
-	Transformacional: {
+	transformacional: {
+		type: "Transformacional",
 		description:
 			"Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão. Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.",
 		anime: {
@@ -29,7 +31,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/9/94/Naruto_Uzumaki.png",
 		},
 	},
-	Transacional: {
+	transacional: {
+		type: "Transacional",
 		description:
 			"Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.",
 		anime: {
@@ -37,7 +40,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/4/4b/Roy_Mustang.png",
 		},
 	},
-	Servidor: {
+	servidor: {
+		type: "Servidor",
 		description:
 			"Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.",
 		anime: {
@@ -45,7 +49,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/c/c6/Tanjiro_Kamado.png",
 		},
 	},
-	Autocrático: {
+	autocratico: {
+		type: "Autocrático",
 		description:
 			"Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.",
 		anime: {
@@ -53,7 +58,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/1/10/Madara_Uchiha.png",
 		},
 	},
-	Democrático: {
+	democratico: {
+		type: "Democrático",
 		description:
 			"Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.",
 		anime: {
@@ -61,7 +67,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/e/e6/Edward_Elric.png",
 		},
 	},
-	Liberal: {
+	liberal: {
+		type: "Liberal",
 		description:
 			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
 		anime: {
@@ -69,7 +76,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/9/90/Shota_Aizawa.png",
 		},
 	},
-	Carismático: {
+	carismatico: {
+		type: "Carismático",
 		description:
 			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
 		anime: {
@@ -77,7 +85,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/6/65/Lelouch_Lamperouge.png",
 		},
 	},
-	Visionário: {
+	visionario: {
+		type: "Visionário",
 		description:
 			"Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.",
 		anime: {
@@ -85,7 +94,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/b/b8/Erwin_Smith.png",
 		},
 	},
-	Coaching: {
+	coaching: {
+		type: "Coaching",
 		description:
 			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
 		anime: {
@@ -93,7 +103,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "https://upload.wikimedia.org/wikipedia/en/8/88/Kakashi_Hatake.png",
 		},
 	},
-	Situacional: {
+	situacional: {
+		type: "Situacional",
 		description:
 			"Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.",
 		anime: {
@@ -112,17 +123,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Tenta conversar e chegar num acordo com o grupo",
-				type: "Democrático",
+				type: "democratico",
 			},
 			{
 				id: "b",
 				text: "Chama atenção e impõe regras",
-				type: "Autocrático",
+				type: "autocratico",
 			},
 			{
 				id: "c",
 				text: "Dá liberdade e vê se a coisa se resolve sozinha",
-				type: "Liberal",
+				type: "liberal",
 			},
 		],
 	},
@@ -134,17 +145,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Cria uma visão inspiradora pro grupo seguir",
-				type: "Transformacional",
+				type: "transformacional",
 			},
 			{
 				id: "b",
 				text: "Escuta todos e define funções juntos",
-				type: "Democrático",
+				type: "democratico",
 			},
 			{
 				id: "c",
 				text: "Organiza tarefas com prazos e metas claras",
-				type: "Transacional",
+				type: "transacional",
 			},
 		],
 	},
@@ -156,17 +167,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Motiva a galera com ideias criativas e destinos incríveis",
-				type: "Transformacional",
+				type: "transformacional",
 			},
 			{
 				id: "b",
 				text: "Organiza o roteiro, reserva e transporte",
-				type: "Transacional",
+				type: "transacional",
 			},
 			{
 				id: "c",
 				text: "Ajuda todo mundo a se entender e se sentir incluído",
-				type: "Servidor",
+				type: "servidor",
 			},
 		],
 	},
@@ -177,17 +188,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Tenta resolver com empatia e bom humor",
-				type: "Servidor",
+				type: "servidor",
 			},
 			{
 				id: "b",
 				text: "Assume a conversa e direciona a solução",
-				type: "Autocrático",
+				type: "autocratico",
 			},
 			{
 				id: "c",
 				text: "Sugere uma chamada para resolverem juntos",
-				type: "Democrático",
+				type: "democratico",
 			},
 		],
 	},
@@ -198,17 +209,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Faz perguntas e tenta deixar a pessoa confortável",
-				type: "Coaching",
+				type: "coaching",
 			},
 			{
 				id: "b",
 				text: "Observa como a pessoa se adapta naturalmente",
-				type: "Liberal",
+				type: "liberal",
 			},
 			{
 				id: "c",
 				text: "Apresenta os amigos e ajuda na integração",
-				type: "Servidor",
+				type: "servidor",
 			},
 		],
 	},
@@ -219,17 +230,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Dá um discurso empolgante antes da prova",
-				type: "Carismático",
+				type: "carismatico",
 			},
 			{
 				id: "b",
 				text: "Relembra as metas e o plano definido",
-				type: "Transacional",
+				type: "transacional",
 			},
 			{
 				id: "c",
 				text: "Lembra a todos do propósito e do trabalho em equipe",
-				type: "Visionário",
+				type: "visionario",
 			},
 		],
 	},
@@ -241,17 +252,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Cria uma vibe temática e envolvente",
-				type: "Transformacional",
+				type: "transformacional",
 			},
 			{
 				id: "b",
 				text: "Define quem faz o quê com prazos",
-				type: "Transacional",
+				type: "transacional",
 			},
 			{
 				id: "c",
 				text: "Conversa com o grupo pra decidir tudo junto",
-				type: "Democrático",
+				type: "democratico",
 			},
 		],
 	},
@@ -262,17 +273,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Faz uma votação e segue o que a maioria decidir",
-				type: "Democrático",
+				type: "democratico",
 			},
 			{
 				id: "b",
 				text: "Sugere que assistam sozinhos e depois conversem",
-				type: "Liberal",
+				type: "liberal",
 			},
 			{
 				id: "c",
 				text: "Dá um jeito de convencer todos com carisma",
-				type: "Carismático",
+				type: "carismatico",
 			},
 		],
 	},
@@ -283,17 +294,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Se dar bem com qualquer pessoa",
-				type: "Carismático",
+				type: "carismatico",
 			},
 			{
 				id: "b",
 				text: "Ver o futuro",
-				type: "Visionário",
+				type: "visionario",
 			},
 			{
 				id: "c",
 				text: "Ter uma mochila com capacidade infinita",
-				type: "Situacional",
+				type: "situacional",
 			},
 		],
 	},
@@ -304,17 +315,17 @@ export const questions: Question[] = [
 			{
 				id: "a",
 				text: "Assumir a liderança naturalmente",
-				type: "Autocrático",
+				type: "autocratico",
 			},
 			{
 				id: "b",
 				text: "Esperar o grupo se formar e adaptar conforme precisa",
-				type: "Situacional",
+				type: "situacional",
 			},
 			{
 				id: "c",
 				text: "Ajudar cada pessoa a se integrar",
-				type: "Coaching",
+				type: "coaching",
 			},
 		],
 	},

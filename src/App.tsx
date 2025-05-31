@@ -56,7 +56,7 @@ export default function App() {
 		return (
 			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 				<div className="max-w-lg w-full">
-					<h2 className="text-2xl font-semibold mb-6">
+					<h2 className="text-2xl text-center font-semibold mb-6">
 						{current.question}
 					</h2>
 					<div className="flex flex-col gap-4">
@@ -93,6 +93,8 @@ export default function App() {
 		<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 			<h1 className="text-4xl font-extrabold mb-4 text-center">
 				Seu tipo de liderança é:
+				<br />
+				{result.type}
 			</h1>
 			<div className="max-w-md bg-white bg-opacity-20 rounded-xl p-6 flex flex-col items-center gap-6">
 				<img
@@ -100,7 +102,9 @@ export default function App() {
 					alt={result.anime.name}
 					className="w-40 h-40 object-contain rounded-full border-4 border-white"
 				/>
-				<h2 className="text-3xl font-bold">{result.anime.name}</h2>
+				<h2 className="text-3xl text-center font-bold">
+					{result.anime.name}
+				</h2>
 				<p className="text-center">{result.description}</p>
 				<button
 					onClick={() => {
