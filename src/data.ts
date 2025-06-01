@@ -28,7 +28,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão. Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.",
 		anime: {
 			name: "Naruto Uzumaki",
-			img: "/public/assets/naruto.png",
+			img: "/assets/naruto.png",
 		},
 	},
 	transacional: {
@@ -37,7 +37,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.",
 		anime: {
 			name: "Roy Mustang (Fullmetal Alchemist)",
-			img: "/public/assets/roy_mustang.png",
+			img: "/assets/roy_mustang.png",
 		},
 	},
 	servidor: {
@@ -46,7 +46,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.",
 		anime: {
 			name: "Tanjiro Kamado",
-			img: "/public/assets/tanjiro_kamado.png",
+			img: "/assets/tanjiro_kamado.png",
 		},
 	},
 	autocratico: {
@@ -55,7 +55,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.",
 		anime: {
 			name: "Madara Uchiha",
-			img: "/public/assets/madara_uchiha.png",
+			img: "/assets/madara_uchiha.png",
 		},
 	},
 	democratico: {
@@ -64,7 +64,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.",
 		anime: {
 			name: "Edward Elric",
-			img: "/public/assets/edward_elric.png",
+			img: "/assets/edward_elric.png",
 		},
 	},
 	liberal: {
@@ -73,7 +73,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
 		anime: {
 			name: "Shota Aizawa (Eraser Head)",
-			img: "/public/assets/shota_aizawa.png",
+			img: "/assets/shota_aizawa.png",
 		},
 	},
 	carismatico: {
@@ -82,7 +82,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
 		anime: {
 			name: "Lelouch Lamperouge",
-			img: "/public/assets/lelouch_lamperouge.png",
+			img: "/assets/lelouch_lamperouge.png",
 		},
 	},
 	visionario: {
@@ -91,7 +91,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.",
 		anime: {
 			name: "Erwin Smith",
-			img: "/public/assets/erwin_smith.png",
+			img: "/assets/erwin_smith.png",
 		},
 	},
 	coaching: {
@@ -100,7 +100,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
 		anime: {
 			name: "Kakashi Hatake",
-			img: "/public/assets/kakashi.png",
+			img: "/assets/kakashi.png",
 		},
 	},
 	situacional: {
@@ -109,7 +109,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.",
 		anime: {
 			name: "Gon Freecss",
-			img: "/public/assets/gon.png",
+			img: "/assets/gon.png",
 		},
 	},
 };
