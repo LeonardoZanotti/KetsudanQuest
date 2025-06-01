@@ -35,7 +35,7 @@ export default function App() {
 
 	if (step === 0) {
 		return (
-			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white text-center">
+			<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white text-center">
 				<motion.img
 					src={katsudanLogo}
 					alt="Katsudan Quest Logo"
@@ -50,7 +50,7 @@ export default function App() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
 				>
-					Anime Liderança
+					Katsudan Quest
 				</motion.h1>
 				<motion.p
 					className="mb-8 max-w-md text-lg md:text-xl"
@@ -77,7 +77,7 @@ export default function App() {
 	if (step > 0 && step <= questions.length) {
 		const current: Question = questions[step - 1];
 		return (
-			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
+			<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 				<div className="max-w-lg w-full">
 					<motion.h2
 						className="text-3xl text-center font-semibold mb-6"
@@ -112,7 +112,7 @@ export default function App() {
 
 	if (!result) {
 		return (
-			<div className="min-h-screen bg-red-600 flex items-center justify-center text-white text-xl">
+			<div className="w-full min-h-screen bg-red-600 flex items-center justify-center text-white text-xl">
 				Ocorreu um erro ao calcular seu resultado. Tente jogar
 				novamente.
 			</div>
@@ -120,7 +120,7 @@ export default function App() {
 	}
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
+		<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 			<h1 className="text-4xl font-extrabold mb-4 text-center">
 				Seu tipo de liderança é:
 				<br />
