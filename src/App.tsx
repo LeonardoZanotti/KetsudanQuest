@@ -6,10 +6,12 @@ import {
 	type Question,
 	type Option,
 } from "./data";
+import katsudanLogo from "./assets/katsudan_quest.png";
+import { motion } from "framer-motion";
 
 export default function App() {
-	const [step, setStep] = useState<number>(0); // controla a etapa
-	const [answers, setAnswers] = useState<string[]>([]); // armazena os tipos de liderança das respostas
+	const [step, setStep] = useState<number>(0);
+	const [answers, setAnswers] = useState<string[]>([]);
 
 	function handleAnswer(type: string) {
 		setAnswers([...answers, type]);
@@ -33,20 +35,41 @@ export default function App() {
 
 	if (step === 0) {
 		return (
-			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
-				<h1 className="text-4xl font-extrabold mb-4 text-center">
+			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white text-center">
+				<motion.img
+					src={katsudanLogo}
+					alt="Katsudan Quest Logo"
+					className="w-28 h-28 mb-4"
+					initial={{ scale: 0 }}
+					animate={{ scale: 1 }}
+					transition={{ duration: 0.5 }}
+				/>
+				<motion.h1
+					className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-md"
+					initial={{ opacity: 0, y: -50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.7 }}
+				>
 					Anime Liderança
-				</h1>
-				<p className="mb-8 max-w-md text-center">
+				</motion.h1>
+				<motion.p
+					className="mb-8 max-w-md text-lg md:text-xl"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.5 }}
+				>
 					Descubra seu tipo de liderança e com qual personagem de
-					anime você mais se parece!
-				</p>
-				<button
+					anime você mais se parece! Responda perguntas e veja o
+					resultado com estilo.
+				</motion.p>
+				<motion.button
 					onClick={() => setStep(1)}
-					className="bg-white text-purple-700 font-bold py-3 px-6 rounded-lg hover:bg-purple-100 transition"
+					className="bg-white text-purple-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-100 transition"
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.95 }}
 				>
 					Começar
-				</button>
+				</motion.button>
 			</div>
 		);
 	}
@@ -56,21 +79,28 @@ export default function App() {
 		return (
 			<div className="min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 				<div className="max-w-lg w-full">
-					<h2 className="text-2xl text-center font-semibold mb-6">
+					<motion.h2
+						className="text-3xl text-center font-semibold mb-6"
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.4 }}
+					>
 						{current.question}
-					</h2>
+					</motion.h2>
 					<div className="flex flex-col gap-4">
 						{current.options.map((opt: Option) => (
-							<button
+							<motion.button
 								key={opt.id}
 								onClick={() => handleAnswer(opt.type)}
-								className="bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg py-3 px-4 transition"
+								className="bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg py-3 px-4 transition text-lg"
+								whileHover={{ scale: 1.03 }}
+								whileTap={{ scale: 0.98 }}
 							>
 								{opt.text}
-							</button>
+							</motion.button>
 						))}
 					</div>
-					<p className="mt-4 text-sm opacity-70">
+					<p className="mt-4 text-sm opacity-70 text-center">
 						Pergunta {step} de {questions.length}
 					</p>
 				</div>
@@ -82,7 +112,7 @@ export default function App() {
 
 	if (!result) {
 		return (
-			<div>
+			<div className="min-h-screen bg-red-600 flex items-center justify-center text-white text-xl">
 				Ocorreu um erro ao calcular seu resultado. Tente jogar
 				novamente.
 			</div>
@@ -100,12 +130,14 @@ export default function App() {
 				<img
 					src={result.anime.img}
 					alt={result.anime.name}
-					className="w-40 h-40 object-contain rounded-full border-4 border-white"
+					className="w-60 h-60 object-cover rounded-xl border-4 border-white shadow-lg"
 				/>
 				<h2 className="text-3xl text-center font-bold">
 					{result.anime.name}
 				</h2>
-				<p className="text-center">{result.description}</p>
+				<p className="text-center text-lg leading-relaxed">
+					{result.description}
+				</p>
 				<button
 					onClick={() => {
 						setStep(0);
