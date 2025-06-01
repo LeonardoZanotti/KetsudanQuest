@@ -127,7 +127,7 @@ export const questions: Question[] = [
 			},
 			{
 				id: "b",
-				text: "Chama atenção e impõe regras",
+				text: "Chama atenção e impõe regras claras",
 				type: "autocratico",
 			},
 			{
@@ -135,12 +135,17 @@ export const questions: Question[] = [
 				text: "Dá liberdade e vê se a coisa se resolve sozinha",
 				type: "liberal",
 			},
+			{
+				id: "d",
+				text: "Inspira o grupo a manter o foco na diversão de todos",
+				type: "transformacional",
+			},
 		],
 	},
 	{
 		id: 2,
 		question:
-			"Você é escolhido para liderar um grupo num trabalho da faculdade. Como age?",
+			"Você é escolhido para liderar um grupo na faculdade. Como age?",
 		options: [
 			{
 				id: "a",
@@ -157,175 +162,349 @@ export const questions: Question[] = [
 				text: "Organiza tarefas com prazos e metas claras",
 				type: "transacional",
 			},
+			{
+				id: "d",
+				text: "Avalia as habilidades de cada um e ajuda no desenvolvimento",
+				type: "coaching",
+			},
 		],
 	},
 	{
 		id: 3,
 		question:
-			"Você e seus amigos estão planejando uma viagem. Qual seu papel?",
+			"Seu grupo de amigos está indeciso sobre o que fazer no fim de semana. Você:",
 		options: [
 			{
 				id: "a",
-				text: "Motiva a galera com ideias criativas e destinos incríveis",
-				type: "transformacional",
+				text: "Propõe algo novo e animador que ninguém pensou ainda",
+				type: "visionario",
 			},
 			{
 				id: "b",
-				text: "Organiza o roteiro, reserva e transporte",
-				type: "transacional",
+				text: "Faz uma votação para decidir democraticamente",
+				type: "democratico",
 			},
 			{
 				id: "c",
-				text: "Ajuda todo mundo a se entender e se sentir incluído",
-				type: "servidor",
+				text: "Deixa rolar naturalmente sem interferir muito",
+				type: "liberal",
+			},
+			{
+				id: "d",
+				text: "Analisa o humor do grupo e sugere algo adequado",
+				type: "situacional",
 			},
 		],
 	},
 	{
 		id: 4,
-		question: "Quando tem uma discussão num grupo de WhatsApp, você...",
+		question: "Quando tem conflito entre amigos, você geralmente:",
 		options: [
 			{
 				id: "a",
-				text: "Tenta resolver com empatia e bom humor",
+				text: "Media o conflito com empatia e escuta ativa",
 				type: "servidor",
 			},
 			{
 				id: "b",
-				text: "Assume a conversa e direciona a solução",
+				text: "Assume o controle da situação e impõe uma solução",
 				type: "autocratico",
 			},
 			{
 				id: "c",
-				text: "Sugere uma chamada para resolverem juntos",
-				type: "democratico",
+				text: "Convence todos com seu carisma e persuasão",
+				type: "carismatico",
+			},
+			{
+				id: "d",
+				text: "Ajuda cada um a refletir sobre suas ações",
+				type: "coaching",
 			},
 		],
 	},
 	{
 		id: 5,
-		question: "Alguém novo entra no seu grupo de amigos. Você...",
+		question: "Num projeto em grupo, você se destaca por:",
 		options: [
 			{
 				id: "a",
-				text: "Faz perguntas e tenta deixar a pessoa confortável",
-				type: "coaching",
+				text: "Ter uma visão clara do resultado final",
+				type: "visionario",
 			},
 			{
 				id: "b",
-				text: "Observa como a pessoa se adapta naturalmente",
-				type: "liberal",
+				text: "Organizar prazos e distribuir tarefas",
+				type: "transacional",
 			},
 			{
 				id: "c",
-				text: "Apresenta os amigos e ajuda na integração",
-				type: "servidor",
+				text: "Manter o ânimo e a motivação do grupo",
+				type: "transformacional",
+			},
+			{
+				id: "d",
+				text: "Adaptar seu estilo conforme as necessidades do momento",
+				type: "situacional",
 			},
 		],
 	},
 	{
 		id: 6,
-		question: "Você está em uma competição. Como motiva seu time?",
+		question: "Seu amigo está desanimado com um projeto pessoal. Você:",
 		options: [
 			{
 				id: "a",
-				text: "Dá um discurso empolgante antes da prova",
-				type: "carismatico",
+				text: "Mostra como o projeto pode impactar positivamente outros",
+				type: "transformacional",
 			},
 			{
 				id: "b",
-				text: "Relembra as metas e o plano definido",
-				type: "transacional",
+				text: "Dá espaço para ele resolver sozinho",
+				type: "liberal",
 			},
 			{
 				id: "c",
-				text: "Lembra a todos do propósito e do trabalho em equipe",
-				type: "visionario",
+				text: "Oferece ajuda prática e divide o problema em etapas",
+				type: "transacional",
+			},
+			{
+				id: "d",
+				text: "Faz perguntas para ajudá-lo a encontrar suas próprias soluções",
+				type: "coaching",
 			},
 		],
 	},
 	{
 		id: 7,
-		question:
-			"Você precisa organizar uma festa surpresa. O que faz primeiro?",
+		question: "Numa viagem em grupo, você é mais o(a):",
 		options: [
 			{
 				id: "a",
-				text: "Cria uma vibe temática e envolvente",
-				type: "transformacional",
+				text: "Planejador(a) que define roteiro e regras",
+				type: "autocratico",
 			},
 			{
 				id: "b",
-				text: "Define quem faz o quê com prazos",
-				type: "transacional",
+				text: "Animador(a) que mantém o clima leve e divertido",
+				type: "carismatico",
 			},
 			{
 				id: "c",
-				text: "Conversa com o grupo pra decidir tudo junto",
-				type: "democratico",
+				text: "Mediador(a) que garante que todos estejam confortáveis",
+				type: "servidor",
+			},
+			{
+				id: "d",
+				text: "Flexível que se adapta ao que o grupo decidir",
+				type: "situacional",
 			},
 		],
 	},
 	{
 		id: 8,
-		question: "Seu grupo está dividido sobre qual série assistir. Você...",
+		question: "Quando precisa convencer alguém, você usa mais:",
 		options: [
 			{
 				id: "a",
-				text: "Faz uma votação e segue o que a maioria decidir",
-				type: "democratico",
+				text: "Lógica e argumentos racionais",
+				type: "transacional",
 			},
 			{
 				id: "b",
-				text: "Sugere que assistam sozinhos e depois conversem",
-				type: "liberal",
+				text: "Emoção e visão inspiradora",
+				type: "transformacional",
 			},
 			{
 				id: "c",
-				text: "Dá um jeito de convencer todos com carisma",
+				text: "Carisma e persuasão pessoal",
 				type: "carismatico",
+			},
+			{
+				id: "d",
+				text: "Exemplos práticos e casos similares",
+				type: "coaching",
 			},
 		],
 	},
 	{
 		id: 9,
-		question: "Se pudesse escolher um superpoder, qual seria?",
+		question: "Num trabalho em equipe, você valoriza mais:",
 		options: [
 			{
 				id: "a",
-				text: "Se dar bem com qualquer pessoa",
-				type: "carismatico",
+				text: "Os resultados e a eficiência",
+				type: "autocratico",
 			},
 			{
 				id: "b",
-				text: "Ver o futuro",
-				type: "visionario",
+				text: "O desenvolvimento de cada membro",
+				type: "coaching",
 			},
 			{
 				id: "c",
-				text: "Ter uma mochila com capacidade infinita",
-				type: "situacional",
+				text: "A harmonia e colaboração do grupo",
+				type: "servidor",
+			},
+			{
+				id: "d",
+				text: "A inovação e criatividade coletiva",
+				type: "democratico",
 			},
 		],
 	},
 	{
 		id: 10,
-		question: "Em um grupo novo, você costuma...",
+		question: "Seu estilo de motivar pessoas é mais:",
 		options: [
 			{
 				id: "a",
-				text: "Assumir a liderança naturalmente",
+				text: "Mostrar como seu trabalho faz diferença",
+				type: "visionario",
+			},
+			{
+				id: "b",
+				text: "Oferecer recompensas ou reconhecimento",
+				type: "transacional",
+			},
+			{
+				id: "c",
+				text: "Criar um ambiente acolhedor e seguro",
+				type: "servidor",
+			},
+			{
+				id: "d",
+				text: "Desafiar a superar seus limites",
+				type: "transformacional",
+			},
+		],
+	},
+	{
+		id: 11,
+		question: "Quando algo dá errado no grupo, você primeiro:",
+		options: [
+			{
+				id: "a",
+				text: "Analisa os fatos e toma decisões rápidas",
 				type: "autocratico",
 			},
 			{
 				id: "b",
-				text: "Esperar o grupo se formar e adaptar conforme precisa",
+				text: "Reúne todos para discutir soluções",
+				type: "democratico",
+			},
+			{
+				id: "c",
+				text: "Acalma o grupo e mantém a positividade",
+				type: "carismatico",
+			},
+			{
+				id: "d",
+				text: "Ajuda cada um a aprender com o erro",
+				type: "coaching",
+			},
+		],
+	},
+	{
+		id: 12,
+		question: "Você prefere quando as regras são:",
+		options: [
+			{
+				id: "a",
+				text: "Claras e bem definidas para todos",
+				type: "transacional",
+			},
+			{
+				id: "b",
+				text: "Flexíveis conforme a situação",
 				type: "situacional",
 			},
 			{
 				id: "c",
-				text: "Ajudar cada pessoa a se integrar",
-				type: "coaching",
+				text: "Decididas pelo consenso do grupo",
+				type: "democratico",
+			},
+			{
+				id: "d",
+				text: "Orientadas por um propósito maior",
+				type: "visionario",
+			},
+		],
+	},
+	{
+		id: 13,
+		question: "Num grupo novo, você tende a:",
+		options: [
+			{
+				id: "a",
+				text: "Observar primeiro e depois se adaptar",
+				type: "situacional",
+			},
+			{
+				id: "b",
+				text: "Tomar a iniciativa naturalmente",
+				type: "autocratico",
+			},
+			{
+				id: "c",
+				text: "Quebrar o gelo e animar o clima",
+				type: "carismatico",
+			},
+			{
+				id: "d",
+				text: "Ajudar os mais tímidos a se integrarem",
+				type: "servidor",
+			},
+		],
+	},
+	{
+		id: 14,
+		question: "Sua maior força em grupo é:",
+		options: [
+			{
+				id: "a",
+				text: "Minha capacidade de enxergar o todo",
+				type: "visionario",
+			},
+			{
+				id: "b",
+				text: "Minha habilidade de resolver problemas",
+				type: "transacional",
+			},
+			{
+				id: "c",
+				text: "Minha energia contagiante",
+				type: "transformacional",
+			},
+			{
+				id: "d",
+				text: "Minha sensibilidade às necessidades alheias",
+				type: "servidor",
+			},
+		],
+	},
+	{
+		id: 15,
+		question: "Qual frase combina mais com você?",
+		options: [
+			{
+				id: "a",
+				text: "Juntos podemos mudar as coisas!",
+				type: "transformacional",
+			},
+			{
+				id: "b",
+				text: "Cada um no seu ritmo, sem pressão",
+				type: "liberal",
+			},
+			{
+				id: "c",
+				text: "Vamos seguir o plano e focar no resultado",
+				type: "transacional",
+			},
+			{
+				id: "d",
+				text: "O que você acha que seria melhor?",
+				type: "democratico",
 			},
 		],
 	},
