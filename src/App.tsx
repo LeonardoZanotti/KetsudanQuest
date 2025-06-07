@@ -119,6 +119,19 @@ export default function App() {
 		);
 	}
 
+	const shareMessage = `Descobri meu tipo de liderança com o Ketsudan Quest! ✨\nSou como ${result.anime.name}:\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
+
+	const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
+
+	const handleCopy = async () => {
+		try {
+			await navigator.clipboard.writeText(shareMessage);
+			alert("Texto copiado para a área de transferência!");
+		} catch {
+			alert("Falha ao copiar texto.");
+		}
+	};
+
 	return (
 		<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 			<h1 className="text-4xl font-extrabold mb-4 text-center">
@@ -138,6 +151,23 @@ export default function App() {
 				<p className="text-center text-lg leading-relaxed">
 					{result.description}
 				</p>
+				<div className="flex flex-col gap-3 mt-6">
+					<a
+						href={shareUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-2xl shadow-md"
+					>
+						Compartilhar no WhatsApp
+					</a>
+					<button
+						onClick={handleCopy}
+						className="bg-blue-500 hover:bg-blue-600 text-white"
+					>
+						Copiar resultado
+					</button>
+				</div>
+
 				<button
 					onClick={() => {
 						setStep(0);
