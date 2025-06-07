@@ -92,7 +92,7 @@ export default function App() {
 							<motion.button
 								key={opt.id}
 								onClick={() => handleAnswer(opt.type)}
-								className="bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg py-3 px-4 transition text-lg"
+								className="focus:outline-none bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg py-3 px-4 transition text-lg"
 								whileHover={{ scale: 1.03 }}
 								whileTap={{ scale: 0.98 }}
 							>
