@@ -110,7 +110,7 @@ export default function App() {
 		);
 	}
 
-	const shareMessage = `Descobri meu tipo de liderança com o Ketsudan Quest! ✨\nSou como ${result.anime.name}:\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
+	const shareMessage = `Descobri meu tipo de liderança com o Anime Líder! ✨\nSou como ${result.anime.name}:\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
 
 	const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
 
