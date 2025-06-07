@@ -156,13 +156,13 @@ export default function App() {
 						href={shareUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-2xl shadow-md"
+						className="bg-green-500 hover:bg-green-600 text-white hover:text-white py-2 px-4 rounded-2xl shadow-md"
 					>
 						Compartilhar no WhatsApp
 					</a>
 					<button
 						onClick={handleCopy}
-						className="bg-blue-500 hover:bg-blue-600 text-white"
+						className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-2xl shadow-md"
 					>
 						Copiar resultado
 					</button>
@@ -173,7 +173,7 @@ export default function App() {
 						setStep(0);
 						setAnswers([]);
 					}}
-					className="bg-white text-purple-700 font-bold py-2 px-6 rounded-lg hover:bg-purple-100 transition"
+					className="bg-white text-purple-700 font-bold py-2 px-4 rounded-2xl shadow-md hover:bg-purple-100 transition"
 				>
 					Jogar de novo
 				</button>
