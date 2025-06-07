@@ -6,7 +6,6 @@ import {
 	type Question,
 	type Option,
 } from "./data";
-import katsudanLogo from "./assets/katsudan_quest.png";
 import { motion } from "framer-motion";
 
 export default function App() {
@@ -36,21 +35,13 @@ export default function App() {
 	if (step === 0) {
 		return (
 			<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white text-center">
-				<motion.img
-					src={katsudanLogo}
-					alt="Katsudan Quest Logo"
-					className="w-28 h-28 mb-4"
-					initial={{ scale: 0 }}
-					animate={{ scale: 1 }}
-					transition={{ duration: 0.5 }}
-				/>
 				<motion.h1
 					className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-md"
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
 				>
-					Katsudan Quest
+					Anime Líder
 				</motion.h1>
 				<motion.p
 					className="mb-8 max-w-md text-lg md:text-xl"

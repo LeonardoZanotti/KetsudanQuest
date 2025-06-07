@@ -14,7 +14,7 @@ function headingIncludes(text: string) {
 	};
 }
 
-describe("Katsudan Quest - all leadership types", () => {
+describe("Anime Líder - all leadership types", () => {
 	for (const targetType in leadershipTypes) {
 		const leadershipType = leadershipTypes[targetType].type;
 
