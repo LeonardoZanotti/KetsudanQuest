@@ -184,5 +184,3 @@ Also the animes characters per leadership type are:
 3. Commit your changes (git commit -m 'Add some amazing feature')
 4. Push to the branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
-
-> Made with by Leonardo Zanotti for an anime event
