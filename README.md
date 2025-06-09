@@ -30,7 +30,7 @@ Discover your anime leadership style with this interactive quiz! Answer question
 
 ```bash
 git clone https://github.com/LeonardoZanotti/KetsudanQuest.git
-cd katsudan-quest
+cd KetsudanQuest
 ```
 
 ### 2. Install dependencies
@@ -68,7 +68,7 @@ pnpm build
 ### Project Structure 📁
 
 ```text
-katsudan-quest/
+KetsudanQuest/
 ├── src/
 │   ├── assets/            # Images and logos
 │   ├── data.ts            # Questions and leadership types data
@@ -148,6 +148,34 @@ initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
 transition={{ duration: 0.5 }}
 ```
+
+### Leadership types
+
+The full list of leadership types is as follows:
+
+-   Transformacional: Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão.Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.
+-   Transacional: Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.
+-   Servidor: Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.
+-   Autocrático: Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.
+-   Democrático: Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.
+-   Liberal: Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.
+-   Carismático: Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.
+-   Visionário: Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.
+-   Coaching: Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.
+-   Situacional: Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.
+
+Also the animes characters per leadership type are:
+
+-   Transformacional é o Naruto
+-   Transacional é o Roy de Fullmetal
+-   Servidor é o Tanjiro do Demon Slayer
+-   Autocratico é o Madara Uchiha
+-   Democratico é o Edward Elric
+-   Liberal é o Shota de Boku no Hero
+-   Carismatico é o Lelouch de Code Geass
+-   Visionario é o Erwin de attack on titan
+-   Coaching é o Kakashi
+-   Situacional é o Gon de HxH
 
 ### Contributing 🤝
 
