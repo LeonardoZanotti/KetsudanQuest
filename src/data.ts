@@ -39,7 +39,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			},
 			female: {
 				name: "Sailor Moon (Sailor Moon)",
-				img: "/assets/sailor_moon.png",
+				img: "/assets/sailor_moon.jpg",
 			},
 		},
 	},
