@@ -309,7 +309,7 @@ A identidade visual segue o esquema de cores da marca "Encontro Jovem Nikkei do 
 
     -   Formato: Quadrado (192x192px)
 
-    -   Estilo: Bordas arredondadas (12px) com contorno verde #2be28a
+    -   Estilo: Bordas arredondadas (12px) com contorno azul #2152a0
 
     -   Efeito: Sombra suave para destaque
 
