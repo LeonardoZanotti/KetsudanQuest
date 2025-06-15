@@ -27,7 +27,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão. Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.",
 		anime: {
-			name: "Naruto Uzumaki",
+			name: "Naruto Uzumaki (Naruto)",
 			img: "/assets/naruto.png",
 		},
 	},
@@ -45,7 +45,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.",
 		anime: {
-			name: "Tanjiro Kamado",
+			name: "Tanjiro Kamado (Demon Slayer)",
 			img: "/assets/tanjiro_kamado.png",
 		},
 	},
@@ -54,7 +54,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.",
 		anime: {
-			name: "Madara Uchiha",
+			name: "Madara Uchiha (Naruto)",
 			img: "/assets/madara_uchiha.png",
 		},
 	},
@@ -63,7 +63,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.",
 		anime: {
-			name: "Edward Elric",
+			name: "Edward Elric (Fullmetal Alchemist)",
 			img: "/assets/edward_elric.png",
 		},
 	},
@@ -72,7 +72,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
 		anime: {
-			name: "Shota Aizawa (Eraser Head)",
+			name: "Eraser Head (Boku no Hero)",
 			img: "/assets/shota_aizawa.png",
 		},
 	},
@@ -81,7 +81,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
 		anime: {
-			name: "Lelouch Lamperouge",
+			name: "Lelouch Lamperouge (Code Geass)",
 			img: "/assets/lelouch_lamperouge.png",
 		},
 	},
@@ -90,7 +90,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.",
 		anime: {
-			name: "Erwin Smith",
+			name: "Erwin Smith (Attack on Titan)",
 			img: "/assets/erwin_smith.png",
 		},
 	},
@@ -99,7 +99,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
 		anime: {
-			name: "Kakashi Hatake",
+			name: "Kakashi Hatake (Naruto)",
 			img: "/assets/kakashi.png",
 		},
 	},
@@ -108,7 +108,7 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.",
 		anime: {
-			name: "Gon Freecss",
+			name: "Gon Freecss (Hunter X Hunter)",
 			img: "/assets/gon.png",
 		},
 	},
