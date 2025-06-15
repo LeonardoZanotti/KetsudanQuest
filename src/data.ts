@@ -12,14 +12,20 @@ export interface Question {
 	options: Option[];
 }
 
-export interface LeadershipType {
+export type LeadershipType = {
 	type: string;
 	description: string;
 	anime: {
-		name: string;
-		img: string;
+		male: {
+			name: string;
+			img: string;
+		};
+		female: {
+			name: string;
+			img: string;
+		};
 	};
-}
+};
 
 export const leadershipTypes: Record<string, LeadershipType> = {
 	transformacional: {
@@ -27,8 +33,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Líderes transformacionais inspiram e motivam por meio da visão, carisma e paixão. Eles desafiam o status quo, promovem mudanças positivas e acreditam no potencial das pessoas.",
 		anime: {
-			name: "Naruto Uzumaki (Naruto)",
-			img: "/assets/naruto.png",
+			male: {
+				name: "Naruto Uzumaki (Naruto)",
+				img: "/assets/naruto.png",
+			},
+			female: {
+				name: "Sailor Moon (Sailor Moon)",
+				img: "/assets/sailor_moon.png",
+			},
 		},
 	},
 	transacional: {
@@ -36,8 +48,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.",
 		anime: {
-			name: "Roy Mustang (Fullmetal Alchemist)",
-			img: "/assets/roy_mustang.png",
+			male: {
+				name: "Roy Mustang (Fullmetal Alchemist)",
+				img: "/assets/roy_mustang.png",
+			},
+			female: {
+				name: "Olivier Armstrong (Fullmetal Alchemist)",
+				img: "/assets/olivier_armstrong.png",
+			},
 		},
 	},
 	servidor: {
@@ -45,8 +63,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Colocam as necessidades da equipe em primeiro lugar. Valorizam empatia, escuta ativa e apoio emocional, criando ambientes seguros e colaborativos.",
 		anime: {
-			name: "Tanjiro Kamado (Demon Slayer)",
-			img: "/assets/tanjiro_kamado.png",
+			male: {
+				name: "Tanjiro Kamado (Demon Slayer)",
+				img: "/assets/tanjiro_kamado.png",
+			},
+			female: {
+				name: "Maomao (Diário de uma Apocecária)",
+				img: "/assets/maomao.png",
+			},
 		},
 	},
 	autocratico: {
@@ -54,8 +78,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Tomam decisões unilaterais, exigem obediência e mantêm controle absoluto. São eficientes em crises, mas podem suprimir a criatividade.",
 		anime: {
-			name: "Madara Uchiha (Naruto)",
-			img: "/assets/madara_uchiha.png",
+			male: {
+				name: "Madara Uchiha (Naruto)",
+				img: "/assets/madara_uchiha.png",
+			},
+			female: {
+				name: "Boa Hancock (One Piece)",
+				img: "/assets/boa_hancock.png",
+			},
 		},
 	},
 	democratico: {
@@ -63,8 +93,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Promovem participação e valorizam o consenso. Buscam soluções coletivas, incentivando o pensamento crítico e o engajamento de todos.",
 		anime: {
-			name: "Edward Elric (Fullmetal Alchemist)",
-			img: "/assets/edward_elric.png",
+			male: {
+				name: "Edward Elric (Fullmetal Alchemist)",
+				img: "/assets/edward_elric.png",
+			},
+			female: {
+				name: "Emma (The Promised Neverland)",
+				img: "/assets/emma.png",
+			},
 		},
 	},
 	liberal: {
@@ -72,8 +108,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
 		anime: {
-			name: "Eraser Head (Boku no Hero)",
-			img: "/assets/shota_aizawa.png",
+			male: {
+				name: "Eraser Head (Boku no Hero)",
+				img: "/assets/shota_aizawa.png",
+			},
+			female: {
+				name: "Tsunade (Naruto)",
+				img: "/assets/tsunade.png",
+			},
 		},
 	},
 	carismatico: {
@@ -81,8 +123,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
 		anime: {
-			name: "Lelouch Lamperouge (Code Geass)",
-			img: "/assets/lelouch_lamperouge.png",
+			male: {
+				name: "Lelouch Lamperouge (Code Geass)",
+				img: "/assets/lelouch_lamperouge.png",
+			},
+			female: {
+				name: "Erza Scarlet (Fairy Tail)",
+				img: "/assets/erza_scarlet.png",
+			},
 		},
 	},
 	visionario: {
@@ -90,8 +138,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.",
 		anime: {
-			name: "Erwin Smith (Attack on Titan)",
-			img: "/assets/erwin_smith.png",
+			male: {
+				name: "Erwin Smith (Attack on Titan)",
+				img: "/assets/erwin_smith.png",
+			},
+			female: {
+				name: "Hange Zoe (Attack on Titan)",
+				img: "/assets/hange_zoe.png",
+			},
 		},
 	},
 	motivacional: {
@@ -99,8 +153,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
 		anime: {
-			name: "Kakashi Hatake (Naruto)",
-			img: "/assets/kakashi.png",
+			male: {
+				name: "Kakashi Hatake (Naruto)",
+				img: "/assets/kakashi.png",
+			},
+			female: {
+				name: "Rukia Kuchiki (Bleach)",
+				img: "/assets/rukia_kuchiki.png",
+			},
 		},
 	},
 	situacional: {
@@ -108,8 +168,14 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 		description:
 			"Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.",
 		anime: {
-			name: "Gon Freecss (Hunter X Hunter)",
-			img: "/assets/gon.png",
+			male: {
+				name: "Gon Freecss (Hunter X Hunter)",
+				img: "/assets/gon.png",
+			},
+			female: {
+				name: "Mikasa Ackerman (Attack on Titan)",
+				img: "/assets/mikasa_ackerman.png",
+			},
 		},
 	},
 };

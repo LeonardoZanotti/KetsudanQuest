@@ -49,7 +49,7 @@ export default function App() {
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.5 }}
 				>
-					Descubra seu tipo de liderança e com qual personagem de
+					Descubra seu estilo de liderança e com qual personagem de
 					anime você mais se parece! Responda perguntas e veja o
 					resultado com estilo.
 				</motion.p>
@@ -110,7 +110,7 @@ export default function App() {
 		);
 	}
 
-	const shareMessage = `Descobri meu tipo de liderança com o Anime Líder! ✨\nSou como ${result.anime.name}:\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
+	const shareMessage = `Descobri meu estilo de liderança com o Anime Líder! ✨\nSou do estilo ${result.type}:\nComo ${result.anime.male.name} ou ${result.anime.female.name}!\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
 
 	const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
 
@@ -126,19 +126,34 @@ export default function App() {
 	return (
 		<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
 			<h1 className="text-4xl font-extrabold mb-4 text-center">
-				Seu tipo de liderança é:
+				Seu estilo de liderança é:
 				<br />
 				{result.type}
 			</h1>
 			<div className="max-w-md bg-white bg-opacity-20 rounded-xl p-6 flex flex-col items-center gap-6">
-				<img
-					src={result.anime.img}
-					alt={result.anime.name}
-					className="w-60 h-60 object-cover rounded-xl border-4 border-white shadow-lg"
-				/>
-				<h2 className="text-3xl text-center font-bold">
-					{result.anime.name}
-				</h2>
+				<div className="flex flex-col md:flex-row items-center gap-6">
+					<div className="flex flex-col items-center">
+						<img
+							src={result.anime.male.img}
+							alt={result.anime.male.name}
+							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
+						/>
+						<p className="mt-2 font-semibold">
+							{result.anime.male.name}
+						</p>
+					</div>
+					<div className="flex flex-col items-center">
+						<img
+							src={result.anime.female.img}
+							alt={result.anime.female.name}
+							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
+						/>
+						<p className="mt-2 font-semibold">
+							{result.anime.female.name}
+						</p>
+					</div>
+				</div>
+
 				<p className="text-center text-lg leading-relaxed">
 					{result.description}
 				</p>
