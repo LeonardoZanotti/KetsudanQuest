@@ -94,8 +94,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			img: "/assets/erwin_smith.png",
 		},
 	},
-	coaching: {
-		type: "Coaching",
+	motivacional: {
+		type: "Motivacional",
 		description:
 			"Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.",
 		anime: {
@@ -165,7 +165,7 @@ export const questions: Question[] = [
 			{
 				id: "d",
 				text: "Avalia as habilidades de cada um e ajuda no desenvolvimento",
-				type: "coaching",
+				type: "motivacional",
 			},
 		],
 	},
@@ -218,7 +218,7 @@ export const questions: Question[] = [
 			{
 				id: "d",
 				text: "Ajuda cada um a refletir sobre suas ações",
-				type: "coaching",
+				type: "motivacional",
 			},
 		],
 	},
@@ -270,7 +270,7 @@ export const questions: Question[] = [
 			{
 				id: "d",
 				text: "Faz perguntas para ajudá-lo a encontrar suas próprias soluções",
-				type: "coaching",
+				type: "motivacional",
 			},
 		],
 	},
@@ -322,7 +322,7 @@ export const questions: Question[] = [
 			{
 				id: "d",
 				text: "Exemplos práticos e casos similares",
-				type: "coaching",
+				type: "motivacional",
 			},
 		],
 	},
@@ -338,7 +338,7 @@ export const questions: Question[] = [
 			{
 				id: "b",
 				text: "O desenvolvimento de cada membro",
-				type: "coaching",
+				type: "motivacional",
 			},
 			{
 				id: "c",
@@ -400,7 +400,7 @@ export const questions: Question[] = [
 			{
 				id: "d",
 				text: "Ajuda cada um a aprender com o erro",
-				type: "coaching",
+				type: "motivacional",
 			},
 		],
 	},

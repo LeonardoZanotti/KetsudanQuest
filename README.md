@@ -161,7 +161,7 @@ The full list of leadership types is as follows:
 -   Liberal: Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.
 -   Carismático: Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.
 -   Visionário: Guiados por uma visão de futuro clara, mobilizam a equipe para um propósito maior. São estratégicos, intuitivos e inspiradores.
--   Coaching: Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.
+-   Motivacional: Focados no desenvolvimento individual. Ajudam a equipe a crescer, aprendendo com os erros e ampliando o potencial de cada membro.
 -   Situacional: Adaptam seu estilo conforme o contexto e as pessoas envolvidas. Flexíveis, sabem quando liderar, delegar, motivar ou controlar.
 
 Also the animes characters per leadership type are:
@@ -174,7 +174,7 @@ Also the animes characters per leadership type are:
 -   Liberal é o Shota de Boku no Hero
 -   Carismatico é o Lelouch de Code Geass
 -   Visionario é o Erwin de attack on titan
--   Coaching é o Kakashi
+-   Motivacional é o Kakashi
 -   Situacional é o Gon de HxH
 
 ### Contributing 🤝
