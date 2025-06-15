@@ -225,6 +225,186 @@ Also the animes characters per leadership type are:
     -   **Personagem Masculino**: Gon Freecss (Hunter X Hunter)
     -   **Personagem Feminino**: Mikasa Ackerman (Attack on Titan)
 
+### Visual Identity
+
+#### Paleta de Cores
+
+A identidade visual segue o esquema de cores da marca "Encontro Jovem Nikkei do Sul do Brasil":
+
+-   **Azul Principal** `#2152a0`
+
+    _Utilização_: Fundo principal, textos e elementos de destaque
+
+    _Representa_: Confiança, estabilidade e tradição
+
+-   **Rosa Vibrante** `#ed6ea7`
+
+    _Utilização_: Botões principais, elementos interativos e divisores
+
+    _Representa_: Energia, juventude e conexão
+
+-   **Laranja-Amarelo** `#f8b12a`
+
+    _Utilização_: Botões de opção, destaques de texto e fundos secundários
+
+    _Representa_: Otimismo, criatividade e ação
+
+-   **Verde Fresco** `#2be28a`
+
+    _Utilização_: Bordas, elementos decorativos e realces
+
+    _Representa_: Crescimento, renovação e natureza
+
+#### Tipografia
+
+-   **Fonte Primária: Poppins**
+
+    -   Família completa (9 pesos + itálicos)
+
+    -   Utilizada em todos os textos do aplicativo
+
+    -   Características: Moderna, legível e com excelente suporte a acentuação
+
+-   **Hierarquia Tipográfica:**
+
+    -   Títulos: Poppins Bold/ExtraBold (36-48px)
+
+    -   Subtítulos: Poppins SemiBold (24-32px)
+
+    -   Corpo de Texto: Poppins Regular/Medium (16-20px)
+
+    -   Botões: Poppins SemiBold (18px)
+
+#### Elementos Visuais
+
+1. Padrão de Sakura (Cerejeira):
+
+    - Fundo sutil com padrão SVG de pétalas
+
+    - Cor: Rosa #ed6ea7 com 20% de opacidade
+
+    - Simbolismo: Representa a herança cultural japonesa
+
+2. Elemento Pinhão:
+
+    - Ícone decorativo SVG na tela inicial
+
+    - Cor: Verde #2be28a com 20% de opacidade
+
+    - Simbolismo: Representa a cultura do sul do Brasil
+
+3. Cartões e Containers:
+
+    - Fundo branco com 90% de opacidade
+
+    - Bordas arredondadas (12px)
+
+    - Sombra suave para profundidade
+
+    - Espaçamento generoso entre elementos
+
+#### Tratamento de Imagens
+
+-   **Personagens de Anime:**
+
+    -   Formato: Quadrado (192x192px)
+
+    -   Estilo: Bordas arredondadas (12px) com contorno verde #2be28a
+
+    -   Efeito: Sombra suave para destaque
+
+    -   Legenda: Tag com fundo azul e texto branco
+
+-   **Padronização:**
+
+    -   Todas as imagens seguem proporção 1:1
+
+    -   Objeto-cover para manter aspect ratio
+
+    -   Nomes centralizados com limite de 200px de largura
+
+#### Animação e Interação
+
+-   **Biblioteca:** Framer Motion
+
+-   **Transições:**
+
+    -   Entrada de elementos: Fade-in + deslizamento vertical
+
+    -   Botões: Efeito de escala no hover (1.05x) e clique (0.95x)
+
+    -   Troca de telas: Transições suaves (300ms)
+
+-   **Feedback Visual:**
+
+    -   Botões com mudança de opacidade ao interagir
+
+    -   Indicador de progresso das perguntas
+
+    -   Microinterações em todas ações do usuário
+
+#### Layout Responsivo
+
+-   **Mobile-First:**
+
+    -   Conteúdo em coluna única
+
+    -   Espaçamento vertical generoso
+
+    -   Elementos de divisão horizontal
+
+-   **Desktop:**
+
+    -   Adaptação para telas maiores
+
+    -   Elementos dispostos em linha
+
+    -   Divisores verticais entre seções
+
+    -   Largura máxima de conteúdo (1200px)
+
+#### Componentes-Chave
+
+-   **Tela Inicial:**
+
+    -   Fundo azul com padrão sakura
+
+    -   Elemento pinhão decorativo
+
+    -   Botão com destaque rosa
+
+-   **Perguntas:**
+
+    -   Cartão branco semi-transparente
+
+    -   Opções com fundo laranja-amarelo
+
+    -   Indicador de progresso inferior
+
+-   **Resultados:**
+
+    -   Display lado-a-lado de personagens
+
+    -   Divisor rosa responsivo (horizontal/vertical)
+
+    -   Área de descrição com fundo amarelo suave
+
+    -   Botões de ação com ícones
+
+#### Princípios de Design
+
+-   **Fusão Cultural**: Combina elementos japoneses (sakura, anime) com símbolos brasileiros (pinhão)
+
+-   **Juventude**: Cores vibrantes e tipografia moderna
+
+-   **Acessibilidade**: Contraste adequado e tamanhos de texto legíveis
+
+-   **Consistência**: Padrões visuais aplicados uniformemente
+
+-   **Engajamento**: Animações sutis para melhor experiência
+
+Este sistema de design cria uma identidade visual coesa que honra a herança cultural nikkei enquanto oferece uma experiência moderna e engajante para o público jovem. A paleta vibrante e os elementos temáticos reforçam a proposta do evento enquanto mantêm a usabilidade no centro da experiência.
+
 ### Contributing 🤝
 
 1. Fork the project
