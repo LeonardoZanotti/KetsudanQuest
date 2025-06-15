@@ -17,15 +17,19 @@ function headingIncludes(text: string) {
 describe("Anime Líder - all leadership types", () => {
 	for (const targetType in leadershipTypes) {
 		const leadershipType = leadershipTypes[targetType].type;
+		const maleCharacter = leadershipTypes[targetType].anime.male;
+		const femaleCharacter = leadershipTypes[targetType].anime.female;
 
-		it(`should show result for leadership type "${leadershipType}"`, async () => {
+		it(`should show correct characters for "${leadershipType}" style`, async () => {
 			render(<App />);
 
+			// Start the quiz
 			const startButton = screen.getByRole("button", {
 				name: /começar/i,
 			});
 			fireEvent.click(startButton);
 
+			// Answer all questions with the target leadership type
 			for (let i = 0; i < questions.length; i++) {
 				const currentQuestion = questions[i];
 				const option = currentQuestion.options.find(
@@ -44,8 +48,24 @@ describe("Anime Líder - all leadership types", () => {
 				fireEvent.click(button);
 			}
 
+			// Verify leadership style is shown
 			await headingIncludes(leadershipType)();
-			cleanup(); // Clean up between tests
+
+			// Verify male character is displayed correctly
+			const maleName = await screen.findByText(maleCharacter.name);
+			expect(maleName).toBeInTheDocument();
+
+			const maleImage = screen.getByAltText(maleCharacter.name);
+			expect(maleImage).toHaveAttribute("src", maleCharacter.img);
+
+			// Verify female character is displayed correctly
+			const femaleName = await screen.findByText(femaleCharacter.name);
+			expect(femaleName).toBeInTheDocument();
+
+			const femaleImage = screen.getByAltText(femaleCharacter.name);
+			expect(femaleImage).toHaveAttribute("src", femaleCharacter.img);
+
+			cleanup();
 		});
 	}
 });
