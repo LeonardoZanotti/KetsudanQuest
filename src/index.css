@@ -11,6 +11,13 @@ body,
 	padding: 0;
 }
 
+body {
+	margin: 0;
+	font-family: "Poppins", -apple-system, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;

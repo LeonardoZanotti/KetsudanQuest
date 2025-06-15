@@ -32,35 +32,66 @@ export default function App() {
 		return leadershipTypes[maxType];
 	}
 
+	// Padrão visual de sakura como fundo
+	const sakuraPattern = {
+		backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ed6ea7' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+	};
+
 	if (step === 0) {
 		return (
-			<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white text-center">
+			<div
+				className="w-full min-h-screen flex flex-col justify-center items-center p-6 text-center"
+				style={{
+					backgroundColor: "#2f52a0",
+					...sakuraPattern,
+				}}
+			>
 				<motion.h1
-					className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-md"
+					className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-md text-white"
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7 }}
+					style={{ fontFamily: "Poppins, sans-serif" }}
 				>
 					Anime Líder
 				</motion.h1>
-				<motion.p
-					className="mb-8 max-w-md text-lg md:text-xl"
+				<motion.div
+					className="mb-8 max-w-md text-lg md:text-xl bg-white bg-opacity-90 rounded-xl p-6 shadow-lg"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.5 }}
 				>
-					Descubra seu estilo de liderança e com qual personagem de
-					anime você mais se parece! Responda perguntas e veja o
-					resultado com estilo.
-				</motion.p>
+					<p
+						className="text-[#2f52a0]"
+						style={{ fontFamily: "Poppins, sans-serif" }}
+					>
+						Descubra seu estilo de liderança e com qual personagem
+						de anime você mais se parece! Responda as perguntas e
+						veja o resultado com estilo.
+					</p>
+				</motion.div>
 				<motion.button
 					onClick={() => setStep(1)}
-					className="bg-white text-purple-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-100 transition"
+					className="text-white font-bold py-3 px-8 rounded-full shadow-lg transition"
+					style={{
+						backgroundColor: "#ed6ea7",
+						fontFamily: "Poppins, sans-serif",
+					}}
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.95 }}
 				>
 					Começar
 				</motion.button>
+
+				{/* Elemento decorativo - Pinhão */}
+				<div className="absolute bottom-4 right-4 opacity-20">
+					<svg width="60" height="60" viewBox="0 0 24 24">
+						<path
+							fill="#2be28a"
+							d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z"
+						/>
+					</svg>
+				</div>
 			</div>
 		);
 	}
@@ -68,22 +99,34 @@ export default function App() {
 	if (step > 0 && step <= questions.length) {
 		const current: Question = questions[step - 1];
 		return (
-			<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
-				<div className="max-w-lg w-full">
+			<div
+				className="w-full min-h-screen flex flex-col justify-center items-center p-6"
+				style={{
+					backgroundColor: "#2f52a0",
+					...sakuraPattern,
+				}}
+			>
+				<div className="max-w-lg w-full text-center bg-white bg-opacity-90 rounded-xl p-6 shadow-lg">
 					<motion.h2
-						className="text-3xl text-center font-semibold mb-6"
+						className="text-2xl md:text-3xl font-semibold mb-6 text-[#2f52a0]"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.4 }}
+						style={{ fontFamily: "Poppins, sans-serif" }}
 					>
 						{current.question}
 					</motion.h2>
-					<div className="flex flex-col gap-4">
+					<div className="flex flex-col gap-3">
 						{current.options.map((opt: Option) => (
 							<motion.button
 								key={opt.id}
 								onClick={() => handleAnswer(opt.type)}
-								className="focus:outline-none bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg py-3 px-4 transition text-lg"
+								className="focus:outline-none py-3 px-4 transition text-lg rounded-lg"
+								style={{
+									backgroundColor: "#f8b12a",
+									color: "#2f52a0",
+									fontFamily: "Poppins, sans-serif",
+								}}
 								whileHover={{ scale: 1.03 }}
 								whileTap={{ scale: 0.98 }}
 							>
@@ -91,7 +134,13 @@ export default function App() {
 							</motion.button>
 						))}
 					</div>
-					<p className="mt-4 text-sm opacity-70 text-center">
+					<p
+						className="mt-4 text-sm opacity-80 text-center"
+						style={{
+							color: "#2f52a0",
+							fontFamily: "Poppins, sans-serif",
+						}}
+					>
 						Pergunta {step} de {questions.length}
 					</p>
 				</div>
@@ -103,9 +152,35 @@ export default function App() {
 
 	if (!result) {
 		return (
-			<div className="w-full min-h-screen bg-red-600 flex items-center justify-center text-white text-xl">
-				Ocorreu um erro ao calcular seu resultado. Tente jogar
-				novamente.
+			<div
+				className="w-full min-h-screen flex items-center justify-center text-xl p-6 text-center"
+				style={{
+					backgroundColor: "#ed6ea7",
+					...sakuraPattern,
+				}}
+			>
+				<div className="bg-white bg-opacity-90 rounded-xl p-8 max-w-md">
+					<p
+						className="text-[#2f52a0]"
+						style={{ fontFamily: "Poppins, sans-serif" }}
+					>
+						Ocorreu um erro ao calcular seu resultado. Tente jogar
+						novamente.
+					</p>
+					<button
+						onClick={() => {
+							setStep(0);
+							setAnswers([]);
+						}}
+						className="mt-4 text-white font-bold py-2 px-4 rounded-full shadow-md transition"
+						style={{
+							backgroundColor: "#2f52a0",
+							fontFamily: "Poppins, sans-serif",
+						}}
+					>
+						Tentar novamente
+					</button>
+				</div>
 			</div>
 		);
 	}
@@ -124,65 +199,157 @@ export default function App() {
 	};
 
 	return (
-		<div className="w-full min-h-screen bg-gradient-to-br from-purple-700 via-pink-600 to-red-600 flex flex-col justify-center items-center p-6 text-white">
-			<h1 className="text-4xl font-extrabold mb-4 text-center">
-				Seu estilo de liderança é:
-				<br />
-				{result.type}
-			</h1>
-			<div className="max-w-md bg-white bg-opacity-20 rounded-xl p-6 flex flex-col items-center gap-6">
-				<div className="flex flex-col md:flex-row items-center gap-6">
-					<div className="flex flex-col items-center">
-						<img
-							src={result.anime.male.img}
-							alt={result.anime.male.name}
-							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
-						/>
-						<p className="mt-2 text-center font-semibold">
+		<div
+			className="w-full min-h-screen flex flex-col justify-center items-center p-6"
+			style={{
+				backgroundColor: "#2f52a0",
+				...sakuraPattern,
+			}}
+		>
+			<div className="max-w-4xl w-full bg-white bg-opacity-90 rounded-xl p-6 shadow-lg">
+				<h1
+					className="text-3xl md:text-4xl font-extrabold mb-6 text-center"
+					style={{
+						color: "#2f52a0",
+						fontFamily: "Poppins, sans-serif",
+					}}
+				>
+					Seu estilo de liderança é:
+					<br />
+					<span className="block mt-2 text-[#ed6ea7]">
+						{result.type}
+					</span>
+				</h1>
+
+				<div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+					{/* Personagem Masculino */}
+					<div className="flex flex-col items-center max-w-[200px]">
+						<div className="relative">
+							<img
+								src={result.anime.male.img}
+								alt={result.anime.male.name}
+								className="w-48 h-48 object-cover rounded-xl border-4 shadow-lg"
+								style={{ borderColor: "#2152a0" }}
+							/>
+							<div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#2152a0] text-white px-3 py-1 rounded-full text-sm whitespace-nowrap">
+								Masculino
+							</div>
+						</div>
+						<p
+							className="mt-6 font-semibold text-lg text-center break-words"
+							style={{
+								color: "#2152a0",
+								fontFamily: "Poppins, sans-serif",
+							}}
+						>
 							{result.anime.male.name}
 						</p>
 					</div>
-					<div className="flex flex-col items-center">
-						<img
-							src={result.anime.female.img}
-							alt={result.anime.female.name}
-							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
-						/>
-						<p className="mt-2 text-center font-semibold">
+
+					{/* Divisor Mobile */}
+					<div className="text-center my-4 md:hidden">
+						<div className="w-16 h-1 bg-[#ed6ea7] mx-auto rounded-full"></div>
+					</div>
+
+					{/* Divisor Desktop */}
+					<div className="hidden md:block">
+						<div className="h-48 w-1 bg-[#ed6ea7] rounded-full"></div>
+					</div>
+
+					{/* Personagem Feminino */}
+					<div className="flex flex-col items-center max-w-[200px]">
+						<div className="relative">
+							<img
+								src={result.anime.female.img}
+								alt={result.anime.female.name}
+								className="w-48 h-48 object-cover rounded-xl border-4 shadow-lg"
+								style={{ borderColor: "#2152a0" }}
+							/>
+							<div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#2152a0] text-white px-3 py-1 rounded-full text-sm whitespace-nowrap">
+								Feminino
+							</div>
+						</div>
+						<p
+							className="mt-6 font-semibold text-lg text-center break-words"
+							style={{
+								color: "#2152a0",
+								fontFamily: "Poppins, sans-serif",
+							}}
+						>
 							{result.anime.female.name}
 						</p>
 					</div>
 				</div>
 
-				<p className="text-center text-lg leading-relaxed">
-					{result.description}
-				</p>
-				<div className="flex flex-col gap-3 mt-6">
+				<div
+					className="bg-[#f8b12a] bg-opacity-20 rounded-xl p-6 mb-8"
+					style={{ fontFamily: "Poppins, sans-serif" }}
+				>
+					<p className="text-[#2f52a0] text-center leading-relaxed">
+						{result.description}
+					</p>
+				</div>
+
+				<div className="flex flex-col sm:flex-row gap-4 justify-center">
 					<a
 						href={shareUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="bg-green-500 hover:bg-green-600 text-white hover:text-white py-2 px-4 rounded-2xl shadow-md"
+						className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl shadow-md text-white hover:text-white text-center"
+						style={{
+							backgroundColor: "#2be28a",
+							fontFamily: "Poppins, sans-serif",
+						}}
 					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+						>
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.361.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+						</svg>
 						Compartilhar no WhatsApp
 					</a>
+
 					<button
 						onClick={handleCopy}
-						className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-2xl shadow-md"
+						className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl shadow-md text-white"
+						style={{
+							backgroundColor: "#ed6ea7",
+							fontFamily: "Poppins, sans-serif",
+						}}
 					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+						>
+							<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+						</svg>
 						Copiar resultado
 					</button>
 				</div>
 
-				<button
-					onClick={() => {
-						setStep(0);
-						setAnswers([]);
-					}}
-					className="bg-white text-purple-700 font-bold py-2 px-4 rounded-2xl shadow-md hover:bg-purple-100 transition"
-				>
-					Jogar de novo
-				</button>
+				<div className="mt-8 flex justify-center">
+					<button
+						onClick={() => {
+							setStep(0);
+							setAnswers([]);
+						}}
+						className="py-2 px-6 rounded-xl shadow-md font-bold transition"
+						style={{
+							backgroundColor: "#2f52a0",
+							color: "white",
+							fontFamily: "Poppins, sans-serif",
+						}}
+					>
+						Jogar de novo
+					</button>
+				</div>
 			</div>
 		</div>
 	);
