@@ -138,7 +138,7 @@ export default function App() {
 							alt={result.anime.male.name}
 							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
 						/>
-						<p className="mt-2 font-semibold">
+						<p className="mt-2 text-center font-semibold">
 							{result.anime.male.name}
 						</p>
 					</div>
@@ -148,7 +148,7 @@ export default function App() {
 							alt={result.anime.female.name}
 							className="w-48 h-48 object-cover rounded-xl border-4 border-white shadow-lg"
 						/>
-						<p className="mt-2 font-semibold">
+						<p className="mt-2 text-center font-semibold">
 							{result.anime.female.name}
 						</p>
 					</div>
