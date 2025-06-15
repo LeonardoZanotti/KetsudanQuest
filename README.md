@@ -166,16 +166,64 @@ The full list of leadership types is as follows:
 
 Also the animes characters per leadership type are:
 
--   Transformacional é o Naruto
--   Transacional é o Roy de Fullmetal
--   Servidor é o Tanjiro do Demon Slayer
--   Autocratico é o Madara Uchiha
--   Democratico é o Edward Elric
--   Liberal é o Shota de Boku no Hero
--   Carismatico é o Lelouch de Code Geass
--   Visionario é o Erwin de attack on titan
--   Motivacional é o Kakashi
--   Situacional é o Gon de HxH
+-   Transformacional
+
+    -   **Descrição**: Inspira e motiva por meio da visão, carisma e paixão. Desafia o status quo e promove mudanças positivas.
+    -   **Personagem Masculino**: Naruto Uzumaki (Naruto)
+    -   **Personagem Feminino**: Sailor Moon (Sailor Moon)
+
+-   Transacional
+
+    -   **Descrição**: Focado em metas e recompensas. Lidera com base em desempenho, regras claras e estrutura.
+    -   **Personagem Masculino**: Roy Mustang (Fullmetal Alchemist)
+    -   **Personagem Feminino**: Olivier Armstrong (Fullmetal Alchemist)
+
+-   Servidor
+
+    -   **Descrição**: Coloca as necessidades da equipe em primeiro lugar. Valoriza empatia e apoio emocional.
+    -   **Personagem Masculino**: Tanjiro Kamado (Demon Slayer)
+    -   **Personagem Feminino**: Maomao (Diário de uma Apocecária)
+
+-   Autocrático
+
+    -   **Descrição**: Toma decisões unilaterais e mantém controle absoluto. Eficiente em crises.
+    -   **Personagem Masculino**: Madara Uchiha (Naruto)
+    -   **Personagem Feminino**: Boa Hancock (One Piece)
+
+-   Democrático
+
+    -   **Descrição**: Promove participação e consenso. Busca soluções coletivas e engajamento.
+    -   **Personagem Masculino**: Edward Elric (Fullmetal Alchemist)
+    -   **Personagem Feminino**: Emma (The Promised Neverland)
+
+-   Liberal
+
+    -   **Descrição**: Oferece liberdade total à equipe. Intervém apenas quando necessário.
+    -   **Personagem Masculino**: Eraser Head (Boku no Hero)
+    -   **Personagem Feminino**: Tsunade (Naruto)
+
+-   Carismático
+
+    -   **Descrição**: Lidera pelo magnetismo pessoal. Inspira entusiasmo e lealdade.
+    -   **Personagem Masculino**: Lelouch Lamperouge (Code Geass)
+    -   **Personagem Feminino**: Erza Scarlet (Fairy Tail)
+
+-   Visionário
+
+    -   **Descrição**: Guiado por visão de futuro clara. Mobiliza a equipe para um propósito maior.
+    -   **Personagem Masculino**: Erwin Smith (Attack on Titan)
+    -   **Personagem Feminino**: Hange Zoe (Attack on Titan)
+
+-   Motivacional
+
+    -   **Descrição**: Focado no desenvolvimento individual. Ajuda a equipe a crescer com os erros.
+    -   **Personagem Masculino**: Kakashi Hatake (Naruto)
+    -   **Personagem Feminino**: Rukia Kuchiki (Bleach)
+
+-   Situacional
+    -   **Descrição**: Adapta o estilo conforme o contexto. Flexível em diferentes situações.
+    -   **Personagem Masculino**: Gon Freecss (Hunter X Hunter)
+    -   **Personagem Feminino**: Mikasa Ackerman (Attack on Titan)
 
 ### Contributing 🤝
 
