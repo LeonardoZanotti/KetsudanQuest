@@ -1,3 +1,5 @@
+import React, { useRef } from "react";
+import html2canvas from "html2canvas";
 import { useState } from "react";
 import {
 	questions,
@@ -9,6 +11,48 @@ import {
 import { motion } from "framer-motion";
 
 export default function App() {
+	const resultRef = useRef<HTMLDivElement>(null);
+
+	// 1) captura o HTML do resultado em dataURL
+	const captureResultImage = async (): Promise<string> => {
+		if (!resultRef.current) throw new Error("Resultado não encontrado");
+		const canvas = await html2canvas(resultRef.current, { scale: 2 });
+		return canvas.toDataURL("image/png");
+	};
+
+	// 2) converte dataURL em File
+	const dataUrlToFile = async (dataUrl: string, filename: string) => {
+		const res = await fetch(dataUrl);
+		const blob = await res.blob();
+		return new File([blob], filename, { type: blob.type });
+	};
+
+	// 3) função principal de share
+	const shareResult = async () => {
+		try {
+			const dataUrl = await captureResultImage();
+			const file = await dataUrlToFile(dataUrl, "resultado.png");
+
+			// verifica suporte
+			if (navigator.canShare && navigator.canShare({ files: [file] })) {
+				await navigator.share({
+					files: [file],
+					title: "Meu resultado no GameX",
+					text: "Confira meu resultado!",
+				});
+			} else {
+				// fallback: faz o download automático
+				const a = document.createElement("a");
+				a.href = dataUrl;
+				a.download = "resultado.png";
+				a.click();
+			}
+		} catch (err) {
+			console.error("Erro ao compartilhar:", err);
+			alert("Não foi possível compartilhar/baixar o resultado.");
+		}
+	};
+
 	const [step, setStep] = useState<number>(0);
 	const [answers, setAnswers] = useState<string[]>([]);
 
@@ -321,6 +365,13 @@ export default function App() {
 							<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
 						</svg>
 						Copiar resultado
+					</button>
+
+					<button
+						onClick={shareResult}
+						className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+					>
+						Compartilhar resultado
 					</button>
 				</div>
 
