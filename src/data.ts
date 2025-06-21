@@ -49,8 +49,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Focados em metas e recompensas. Lideram com base em desempenho, regras claras e estrutura. São excelentes para manter a ordem e a eficiência.",
 		anime: {
 			male: {
-				name: "Roy Mustang (Fullmetal Alchemist)",
-				img: "/assets/roy_mustang.png",
+				name: "Light Yagami (Death Note)",
+				img: "/assets/light_yagami.png",
 			},
 			female: {
 				name: "Olivier Armstrong (Fullmetal Alchemist)",
@@ -68,8 +68,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 				img: "/assets/tanjiro_kamado.png",
 			},
 			female: {
-				name: "Maomao (Diário de uma Apocecária)",
-				img: "/assets/maomao.png",
+				name: "Tohru Honda (Fruits Basket)",
+				img: "/assets/tohru_honda.png",
 			},
 		},
 	},
@@ -83,8 +83,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 				img: "/assets/madara_uchiha.png",
 			},
 			female: {
-				name: "Boa Hancock (One Piece)",
-				img: "/assets/boa_hancock.png",
+				name: "Big Mom (One Piece)",
+				img: "/assets/big_mom.png",
 			},
 		},
 	},
@@ -109,8 +109,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Oferecem liberdade total para a equipe. Confiam na autonomia e criatividade, intervindo apenas quando necessário.",
 		anime: {
 			male: {
-				name: "Eraser Head (Boku no Hero)",
-				img: "/assets/shota_aizawa.png",
+				name: "Rimuru Tempest (That Time I Got Reincarnated as a Slime)",
+				img: "/assets/rimuru_tempest.png",
 			},
 			female: {
 				name: "Tsunade (Naruto)",
@@ -124,8 +124,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 			"Lideram pelo magnetismo pessoal. Inspiram entusiasmo, devoção e lealdade através da presença marcante e comunicação persuasiva.",
 		anime: {
 			male: {
-				name: "Lelouch Lamperouge (Code Geass)",
-				img: "/assets/lelouch_lamperouge.png",
+				name: "Monkey D. Luffy (One Piece)",
+				img: "/assets/monkey_luffy.png",
 			},
 			female: {
 				name: "Erza Scarlet (Fairy Tail)",
@@ -173,8 +173,8 @@ export const leadershipTypes: Record<string, LeadershipType> = {
 				img: "/assets/gon.png",
 			},
 			female: {
-				name: "Mikasa Ackerman (Attack on Titan)",
-				img: "/assets/mikasa_ackerman.png",
+				name: "Frieren (Frieren: Beyond Journey’s End)",
+				img: "/assets/frieren.png",
 			},
 		},
 	},

@@ -175,20 +175,20 @@ Also the animes characters per leadership type are:
 -   Transacional
 
     -   **Descrição**: Focado em metas e recompensas. Lidera com base em desempenho, regras claras e estrutura.
-    -   **Personagem Masculino**: Roy Mustang (Fullmetal Alchemist)
+    -   **Personagem Masculino**: Light Yagami (Death Note)
     -   **Personagem Feminino**: Olivier Armstrong (Fullmetal Alchemist)
 
 -   Servidor
 
     -   **Descrição**: Coloca as necessidades da equipe em primeiro lugar. Valoriza empatia e apoio emocional.
     -   **Personagem Masculino**: Tanjiro Kamado (Demon Slayer)
-    -   **Personagem Feminino**: Maomao (Diário de uma Apocecária)
+    -   **Personagem Feminino**: Tohru Honda (Fruits Basket)
 
 -   Autocrático
 
     -   **Descrição**: Toma decisões unilaterais e mantém controle absoluto. Eficiente em crises.
     -   **Personagem Masculino**: Madara Uchiha (Naruto)
-    -   **Personagem Feminino**: Boa Hancock (One Piece)
+    -   **Personagem Feminino**: Big Mom (One Piece)
 
 -   Democrático
 
@@ -199,13 +199,13 @@ Also the animes characters per leadership type are:
 -   Liberal
 
     -   **Descrição**: Oferece liberdade total à equipe. Intervém apenas quando necessário.
-    -   **Personagem Masculino**: Eraser Head (Boku no Hero)
+    -   **Personagem Masculino**: Rimuru Tempest (That Time I Got Reincarnated as a Slime)
     -   **Personagem Feminino**: Tsunade (Naruto)
 
 -   Carismático
 
     -   **Descrição**: Lidera pelo magnetismo pessoal. Inspira entusiasmo e lealdade.
-    -   **Personagem Masculino**: Lelouch Lamperouge (Code Geass)
+    -   **Personagem Masculino**: Monkey D. Luffy (One Piece)
     -   **Personagem Feminino**: Erza Scarlet (Fairy Tail)
 
 -   Visionário
@@ -223,7 +223,7 @@ Also the animes characters per leadership type are:
 -   Situacional
     -   **Descrição**: Adapta o estilo conforme o contexto. Flexível em diferentes situações.
     -   **Personagem Masculino**: Gon Freecss (Hunter X Hunter)
-    -   **Personagem Feminino**: Mikasa Ackerman (Attack on Titan)
+    -   **Personagem Feminino**: Frieren (Frieren: Beyond Journey’s End)
 
 ### Visual Identity
 

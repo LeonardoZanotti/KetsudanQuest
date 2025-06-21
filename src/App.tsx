@@ -211,9 +211,9 @@ export default function App() {
 					</span>
 				</h1>
 
-				<div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+				<div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 mb-8">
 					{/* Personagem Masculino */}
-					<div className="flex flex-col items-center max-w-[200px]">
+					<div className="flex flex-col items-center md:w-[300px]">
 						<div className="relative">
 							<img
 								src={result.anime.male.img}
@@ -247,7 +247,7 @@ export default function App() {
 					</div>
 
 					{/* Personagem Feminino */}
-					<div className="flex flex-col items-center max-w-[200px]">
+					<div className="flex flex-col items-center md:w-[300px]">
 						<div className="relative">
 							<img
 								src={result.anime.female.img}
