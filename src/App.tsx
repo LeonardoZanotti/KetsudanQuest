@@ -111,11 +111,17 @@ export default function App() {
 							<motion.button
 								key={opt.id}
 								onClick={() => handleAnswer(opt.type)}
-								className="focus:outline-none py-3 px-4 transition text-lg rounded-lg"
+								className="
+									focus:outline-none focus:ring-0 focus:ring-offset-0
+									active:outline-none
+									no-tap-highlight
+									py-3 px-4 transition text-lg rounded-lg
+								"
 								style={{
 									backgroundColor: "#f8b12a",
 									color: "#2f52a0",
 									fontFamily: "Poppins, sans-serif",
+									WebkitTapHighlightColor: "transparent", // inline fallback
 								}}
 								whileHover={{ scale: 1.03 }}
 								whileTap={{ scale: 0.98 }}
