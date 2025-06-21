@@ -191,7 +191,7 @@ export default function App() {
 		);
 	}
 
-	const shareMessage = `Descobri meu estilo de liderança com o Anime Líder! ✨\nSou do estilo ${result.type}:\nComo ${result.anime.male.name} ou ${result.anime.female.name}!\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
+	const shareMessage = `Descobri meu estilo de liderança com o Anime Líder! \nSou do estilo ${result.type}:\nComo ${result.anime.male.name} ou ${result.anime.female.name}!\n${result.description}\nhttps://ketsudan-quest.vercel.app/`;
 
 	const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
 
